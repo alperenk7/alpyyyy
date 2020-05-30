@@ -2,7 +2,7 @@ const express = require("express");
 const pg=require("pg").Pool;
 const bodyParser = require('body-parser'); 
 const app = express();
-const pool=new pg({host:'localhost',database:'hw458',user:'postgres',password:'alperenk7',port:'5432',ssl:false});
+const pool=new pg({host:'localhost',database:'hw458',user:'postgres',password:'alperenk7',port:'5432',ssl:require});
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json()); 
 const _port = process.env.PORT || 5000;
